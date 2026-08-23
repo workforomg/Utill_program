@@ -1,17 +1,4 @@
-# NovelAI V5 Usage Monitor — 배포 보조 파일
-
-이 ZIP에는 **프로그램 본체 Python 코드가 포함되어 있지 않습니다.**
-
-사용자가 직접 받은 `novelai_monitor.py` 파일과 함께 사용하는 보조 파일만 들어 있습니다.
-
-## 포함 파일
-
-- `requirements.txt` — 필요한 Python 패키지 목록
-- `install_dependencies.bat` — 필요한 패키지를 한 번에 설치
-- `RUN_NO_CONSOLE.vbs` — CMD 창 없이 프로그램 실행
-- `README.md` — 현재 안내 파일
-
----
+# NovelAI V5 Usage Monitor — 파일
 
 ## 1. Python 설치
 
@@ -41,26 +28,7 @@ Windows에 Python이 없다면 Python 3.10 이상을 설치하세요.
 
 ---
 
-## 3. 프로그램 본체 배치
-
-본체 Python 파일의 이름을 다음과 같이 맞춰주세요.
-
-`novelai_monitor.py`
-
-그리고 아래처럼 같은 폴더에 둡니다.
-
-```text
-NovelAI V5 Usage Monitor/
-├─ novelai_monitor.py
-├─ RUN_NO_CONSOLE.vbs
-├─ install_dependencies.bat
-├─ requirements.txt
-└─ README.md
-```
-
----
-
-## 4. CMD 창 없이 실행
+## 3. CMD 창 없이 실행
 
 ### 가장 쉬운 방법
 
@@ -86,7 +54,7 @@ novelai_monitor.pyw
 
 ---
 
-## 5. 바로가기 만들기
+## 4. 바로가기 만들기
 
 매번 폴더를 열기 싫다면:
 
@@ -98,15 +66,15 @@ novelai_monitor.pyw
 
 ---
 
-## 6. 토큰 저장 위치
+## 5. 토큰 저장 위치
 
-프로그램이 `keyring`을 사용하는 경우 Persistent API Token은 Python 코드 파일이나 이 ZIP에 저장되는 것이 아니라 **각 사용자의 운영체제 자격 증명 저장소**에 저장됩니다.
+프로그램이 `keyring`을 사용함으로써 Persistent API Token은 Python 코드 파일에 저장되는 것이 아니라 **각 사용자의 운영체제 자격 증명 저장소**에 저장됩니다.
 
-따라서 배포할 때 배포자의 NovelAI 토큰이 다른 사용자에게 같이 전달되는 구조가 아닙니다.
+따라서 재배포할 때 재배포자의 NovelAI 토큰이 다른 사용자에게 같이 전달되는 구조가 아닙니다.
 
 ---
 
-## 7. 연결 해제
+## 6. 연결 해제
 
 프로그램 내부의 `연결 해제` 버튼을 사용하면 저장된 NovelAI API Token을 삭제하도록 구성할 수 있습니다.
 
@@ -133,20 +101,3 @@ python novelai_monitor.py
 ### 시스템 트레이에 아이콘이 안 보이는 경우
 
 Windows 작업 표시줄 오른쪽의 `^` 숨겨진 아이콘 영역도 확인하세요.
-
----
-
-## 권장 배포 방식
-
-사용자에게는 다음 구성으로 전달하는 것을 권장합니다.
-
-```text
-NovelAI V5 Usage Monitor/
-├─ novelai_monitor.py
-├─ RUN_NO_CONSOLE.vbs
-├─ install_dependencies.bat
-├─ requirements.txt
-└─ README.md
-```
-
-이 ZIP에는 의도적으로 `novelai_monitor.py`가 포함되어 있지 않으므로, 본체 코드는 별도로 추가하세요.
